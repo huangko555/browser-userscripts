@@ -12,6 +12,7 @@
 | 文件夹 | 脚本 | 说明 |
 |---|---|---|
 | [`fix-wider-bilibili/`](./fix-wider-bilibili/) | **[fix] Wider Bilibili 宽屏** | 基于开源 [Wider Bilibili](https://greasyfork.org/scripts/474507) 的本地修改版。核心改动：**让「网页全屏」按钮重新可用**(改为切换"预留高度归零")；另含番剧页 (Next.js 改版) 空白修复。详见该文件夹 README。 |
+ | [`aggregate-search/`](./aggregate-search/) | **聚合搜索 V4** | 基于开源 [聚合搜索](https://greasyfork.org/zh-CN/scripts/436652)（作者 Liao Brant）的本地修改版。在百度/Bing/知乎/微信/贴吧/维基/B 站等搜索结果页左侧加「切换搜索」面板，带着当前关键词一键跳到别的站接着搜。详见该文件夹 README。 |
 | [`link-test/`](./link-test/) | **链路测试** | 自检用小脚本：在任意网页右下角注入带版本号的蓝色标签，用来验证「改文件 → 油猴同步 → 刷新生效」这条链路是否打通。详见该文件夹 README。 |
 
 ---

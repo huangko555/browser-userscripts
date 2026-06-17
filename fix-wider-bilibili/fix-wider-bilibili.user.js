@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [fix] Wider Bilibili 宽屏（恢复网页全屏按钮）
 // @namespace    hkq.fix.wider-bilibili
-// @version      0.4.8-fix7
+// @version      0.4.8-fix8
 // @author       posthumz（原作者） / hkq 修改
 // @description  哔哩哔哩宽屏体验 —— 本地修改版：恢复被隐藏的「网页全屏」按钮。基于原版 0.4.8。
 // @license      MIT
@@ -1243,6 +1243,10 @@ fallback: true,
   }).catch(console.error);
   GM_addStyle(styles.panel);
   GM_addStyle(styles.common);
+  // hkq fix：隐藏滚动条（借鉴 YouTube Disable Scrollbar）。本脚本只在 B站视频/番剧页 @match 生效，
+  // 故此处全局隐藏即只作用于这些页面。只去掉滚动条的视觉，不影响滚动本身（滚轮/触控板/键盘照常滚）。
+  GM_addStyle(`html{scrollbar-width:none!important}
+::-webkit-scrollbar{width:0!important;height:0!important}`);
   const url = new URL(window.location.href);
   switch (url.host) {
     case "www.bilibili.com": {
