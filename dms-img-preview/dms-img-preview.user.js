@@ -50,6 +50,8 @@
   let altHeld = false;
   let lastTarget = null, lastX = 0, lastY = 0;
   let currentUrl = '';
+  let lastPreviewUrl = '';
+  let lastAltDownAt = 0;
   const URL_CACHE = new Map();
   // 正在进行的 scrape:{ sig, abortFn, promise }
   let activeScrape = null;
@@ -74,6 +76,7 @@
     if (url !== currentUrl) {
       currentUrl = url; img.src = url; tip.textContent = '加载中…';
     }
+    lastPreviewUrl = url;
     box.style.display = 'block';
     place(x, y);
   }
@@ -274,6 +277,15 @@
   addEventListener('keydown', (e) => {
     if (e.key === 'Alt') {
       e.preventDefault();
+      if (!e.repeat) {
+        const now = Date.now();
+        if (lastPreviewUrl && now - lastAltDownAt <= 350) {
+          window.open(lastPreviewUrl, '_blank', 'noopener,noreferrer');
+          lastAltDownAt = 0;
+          return;
+        }
+        lastAltDownAt = now;
+      }
       if (!altHeld) { altHeld = true; detect(); }
     }
   }, true);
