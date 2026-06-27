@@ -10,6 +10,7 @@
 | [`aggregate-search/`](./aggregate-search/) | **聚合搜索 V4** | 改自 [聚合搜索](https://greasyfork.org/zh-CN/scripts/436652)。搜索结果页左侧加切换面板，带关键词一键跳到其他搜索引擎。 |
 | [`dms-img-preview/`](./dms-img-preview/) | **DMS 图片 URL 悬停预览** | 阿里云 DMS 查询结果里，按住 Alt 悬停含图片 URL 的单元格直接弹窗预览；截断单元格也能自动展开抓取。 |
 | [`feishu-img-preview/`](./feishu-img-preview/) | **飞书图片大图预览** | 飞书文档 / 多维表格中，按住 Alt 悬停图片弹大图浮窗；多维表格隐藏原生小预览、显示更大版本。 |
+| [`fix-bilibili-remove-pv/`](./fix-bilibili-remove-pv/) | **[fix] Bilibili 追番追剧-移除预告 PV** | 改自 MrLv 同名脚本。追番 / 追剧动态里自动隐藏预告、PV、OP、ED 等非正片卡片；去 jQuery 依赖，修复 B 站改版后失效问题。 |
 | [`link-test/`](./link-test/) | **链路测试** | 在任意网页右下角注入带版本号的小标签，验证"改文件 → 油猴同步 → 刷新生效"链路通不通。 |
 
 ## 工作方式：油猴「追踪外部编辑」
